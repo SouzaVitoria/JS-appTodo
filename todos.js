@@ -15,3 +15,12 @@ function renderTodos() {
 }
 
 renderTodos();
+
+function addTodo() {
+  var todoText = inputElement.value;
+  todos.push(todoText);
+  inputElement.value = "";
+  renderTodos();
+}
+
+buttonElement.onclick = addTodo;
