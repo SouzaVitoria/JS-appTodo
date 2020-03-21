@@ -9,7 +9,9 @@ function renderTodos() {
   for (todo of todos) {
     var todoStructure = document.createElement("tr");
     var todoElement = document.createElement("td");
+    todoElement.setAttribute("class", "todoText");
     var deleteElement = document.createElement("td");
+    deleteElement.setAttribute("class", "linkDelete");
     var todoText = document.createTextNode(todo);
 
     var linkElement = document.createElement("a");
