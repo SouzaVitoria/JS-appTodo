@@ -24,7 +24,6 @@ function renderTodos() {
     listElement.appendChild(todoElement);
   }
 }
-
 renderTodos();
 
 function addTodo() {
@@ -33,7 +32,6 @@ function addTodo() {
   inputElement.value = "";
   renderTodos();
 }
-
 buttonElement.onclick = addTodo;
 
 function deleteTodo(position) {
