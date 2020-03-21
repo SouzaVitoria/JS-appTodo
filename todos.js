@@ -1,13 +1,15 @@
-var listElement = document.querySelector("#app ul");
-var inputElement = document.querySelector("#app input");
-var buttonElement = document.querySelector("#app button");
+var listElement = document.querySelector("table");
+var inputElement = document.querySelector("body input");
+var buttonElement = document.querySelector("body button");
 
 var todos = JSON.parse(localStorage.getItem("list_todos")) || [];
 
 function renderTodos() {
   listElement.innerHTML = "";
   for (todo of todos) {
-    var todoElement = document.createElement("li");
+    var todoStructure = document.createElement("tr");
+    var todoElement = document.createElement("td");
+    var deleteElement = document.createElement("td");
     var todoText = document.createTextNode(todo);
 
     var linkElement = document.createElement("a");
@@ -20,8 +22,10 @@ function renderTodos() {
 
     linkElement.appendChild(linkText);
     todoElement.appendChild(todoText);
-    todoElement.appendChild(linkElement);
-    listElement.appendChild(todoElement);
+    deleteElement.appendChild(linkElement);
+    todoStructure.appendChild(todoElement);
+    todoStructure.appendChild(deleteElement);
+    listElement.appendChild(todoStructure);
   }
 }
 renderTodos();

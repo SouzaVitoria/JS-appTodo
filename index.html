@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>App Todos</title>
   </head>
+  <style>
+    h1 {
+      text-align: center;
+    }
+    table,
+    tr,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
   <body>
-    <div id="app">
-      <ul></ul>
-      <input type="text" placeholder="Digite um todo" />
-      <button>Adicionar</button>
-    </div>
-
+    <input type="text" placeholder="Digite um todo" />
+    <button>Adicionar</button>
+    <br /><br />
+    <h1>List Todos</h1>
+    <table style="width:100%;"></table>
     <script src="todos.js"></script>
   </body>
 </html>
