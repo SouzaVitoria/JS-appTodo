@@ -4,14 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>App Todos</title>
+    <link rel="stylesheet" href="src/containers/main.css" />
   </head>
   <body>
-    <div id="app">
-      <ul></ul>
-      <input type="text" placeholder="Digite um todo" />
+    <form>
+      <input type="text" placeholder="Digite um todo" maxlength="250" />
       <button>Adicionar</button>
-    </div>
-
-    <script src="todos.js"></script>
+    </form>
+    <br /><br />
+    <h1>List Todos</h1>
+    <table></table>
+    <script src="src/main.js"></script>
   </body>
 </html>
